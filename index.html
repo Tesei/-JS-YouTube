@@ -1,19 +1,70 @@
-﻿<!DOCTYPE html>
-
+﻿<!--сообщение браузеру как следует обрабатывать страницу-->
+<!DOCTYPE html>
+<!--оболочка содержимого, указываем язык содержимого-->
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<!--заголовок страницы, контейнер для другихважных данных, не отображается-->
 
 <head>
+    <!--кодировка страницы-->
     <meta charset="utf-8" />
+    <!--Название страницы в браузере-->
     <title>Мой новый проект</title>
 </head>
 
+<!--отображаемое тело страницы-->
+
 <body>
-    <h1>hello</h1> // ! используется только один раз в документе
-    <h2>Содержание тега 2</h2>
-    <h3>Содержание тега 3</h3>
-    <h4>Содержание тега 4</h4>
-    <h5>Содержание тега 5</h5>
-    <h6>Содержание тега 6</h6>
+    <!--используется только один раз в документе -->
+    <h1>Содержание тега H1</h1>
+
+    <!-- Испльзуются много раз-->
+    <h2>Содержание тега H2</h2>
+    <h3>Содержание тега H3</h3>
+    <h4>Содержание тега H4</h4>
+    <h5>Содержание тега H5</h5>
+    <h6>Содержание тега H6</h6>
+
+    <!-- назначение нового абзаца-->
+    <p>abzac #1 Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="http://google.com">ссылка на сайт с
+            открытием сайта вэтом же окне</a>, ?
+        Iusto
+        deserunt error optio
+        facilis aperiam iure similique excepturi veritatis, quod voluptates! Nostrum delectus possimus atque. Eos ullam
+        eius ut.</p>
+    <p>abzac #2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatibus! </p>
+
+    <!--Строчный тег для выделения части текста-->
+    <span>Текст спан тега</span>
+    <span>Строчный тег, без выделения в особый блок. Не начинается с новой строки</span>
+
+    <!--Тег для вставки ссылки на сайт, с открытием сайта в новом окне, строчный тег-->
+    <a href="http://google.com" target="_blank" rel="noopener noreferrer"> ссылка на сайт с открытиев в новом
+        окне</a>
+
+    <!--Тег для вставки ссылки на изображение, с открытием сайта в новом окне, строчный тег-->
+    <p><img src="img/лошадь.jpg" alt="horse">
+    </p>
+
+    <!--Тег для маркировки текста точками, внутри текст должен быть с тего <li>-->
+    <ul>
+        <li>Содержимое тега</li>
+        <li>Содержимое тега</li>
+        <li>Содержимое тега</li>
+        <li>Содержимое тега</li>
+    </ul>
+
+    <!--Тег для маркировки текста цифрами, внутри текст должен быть с тего <li>-->
+    <ol>
+        <li>Содержимое тега</li>
+        <li>Содержимое тега</li>
+        <li>Содержимое тега</li>
+        <li>Содержимое тега</li>
+    </ol>
+
+    <!--Тег <br/> перенос текста на новую строку, ставится безоткрывающих скобок-->
+    <div>Lorem ipsum dolor sit amet <br /> adipisicing elit. Porro veniam corrupti excepturi voluptas repudiandae nihil
+        harum aliquam at corporis aliquid quia asperiores quas, inventore modi, fugiat, omnis alias. Ullam, quas!
+    </div>
 </body>
 
 </html>
