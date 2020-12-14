@@ -8,63 +8,76 @@
     <!--кодировка страницы-->
     <meta charset="utf-8" />
     <!--Название страницы в браузере-->
-    <title>Изучение тегов на занятии №3</title>
+    <title>Изучение тегов HTML на занятии №4 - Формы</title>
 </head>
 
 <!--отображаемое тело страницы-->
 
 <body>
-    <!--используется только один раз в документе -->
-    <h1>Содержание тега H1</h1>
+    <!-- отправляет малое количество данных (нельзя отправить фото), видно для всех, на адресс указанный за место #, в строке браузера видна отправка данных-->
+    <form action="#" method="get"></form>
+    <!-- отправляет большее количество данных, скрытно, по запросу браузера на адресс указанный за место # -->
+    <form action="#" method="post"></form>
 
-    <!-- Испльзуются много раз-->
-    <h2>Содержание тега H2</h2>
-    <h3>Содержание тега H3</h3>
-    <h4>Содержание тега H4</h4>
-    <h5>Содержание тега H5</h5>
-    <h6>Содержание тега H6</h6>
+    <form action="#" method="GET" enctype="multipart/form-data">
 
-    <!-- назначение нового абзаца-->
-    <p>abzac #1 Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="http://google.com">ссылка на сайт с
-            открытием сайта вэтом же окне</a>, ?
-        Iusto
-        deserunt error optio
-        facilis aperiam iure similique excepturi veritatis, quod voluptates! Nostrum delectus possimus atque. Eos ullam
-        eius ut.</p>
-    <p>abzac #2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatibus! </p>
-
-    <!--Строчный тег для выделения части текста-->
-    <span>Текст спан тега</span>
-    <span>Строчный тег, без выделения в особый блок. Не начинается с новой строки</span>
-
-    <!--Тег для вставки ссылки на сайт, с открытием сайта в новом окне, строчный тег-->
-    <a href="http://google.com" target="_blank" rel="noopener noreferrer"> ссылка на сайт с открытиев в новом
-        окне</a>
-
-    <!--Тег для вставки ссылки на изображение, с открытием сайта в новом окне, строчный тег-->
-    <p><img src="img/лошадь.jpg" alt="horse">
-    </p>
-
-    <!--Тег для маркировки текста точками, внутри текст должен быть с тего <li>-->
-    <ul>
-        <li>Содержимое тега</li>
-        <li>Содержимое тега</li>
-        <li>Содержимое тега</li>
-        <li>Содержимое тега</li>
-    </ul>
-
-    <!--Тег для маркировки текста цифрами, внутри текст должен быть с тего <li>-->
-    <ol>
-        <li>Содержимое тега</li>
-        <li>Содержимое тега</li>
-        <li>Содержимое тега</li>
-        <li>Содержимое тега</li>
-    </ol>
-
-    <!--Тег <br/> перенос текста на новую строку, ставится безоткрывающих скобок-->
-    <div>Lorem ipsum dolor sit amet <br /> adipisicing elit. Porro veniam corrupti excepturi voluptas repudiandae nihil
-        harum aliquam at corporis aliquid quia asperiores quas, inventore modi, fugiat, omnis alias. Ullam, quas!
-    </div>
+        <div>
+            <!-- ввод данных от пользователя, значение value может быть пустым
+        Тег "placeholder" обозначает пользователю, что необходимо ввести в указанное поле
+        Тег "disabled" делает поле не рабочим - файлы не отправляются на сервер -->
+            <!-- Tabindex определяет порядок перехода после нажатия на клавишу "Tab" Для общей группы тегов табиндек должен бытьс общим числом-->
+            <input tabindex="1" placeholder="Имя пользователя" type="text" name="user">
+        </div>
+        <div>
+            <input disabled type="password" name="userpass" value="">
+        </div>
+        <div>
+            <!-- Ввод данных по средствам выбора готовых значений, "checked" указывает на выбор по умолчанию -->
+            <p><input tabindex="2" checked type="radio" name="beer" value="lager">Светлое</p>
+            <p><input tabindex="2" type="radio" name="beer" value="dark">Тёмное</p>
+        </div>
+        <br />
+        <div>
+            <p><input type="radio" name="beer2" value="lager">Светлое 2</p>
+            <p><input checked type="radio" name="beer2" value="dark">Тёмное 2</p>
+        </div>
+        <br />
+        <div>
+            <!-- Ввод данных - методом указания галочкой имеющихся данных -->
+            <p><input type="checkbox" name="car" value="yes"> Наличие авто </p>
+            <p><input type="checkbox" name="car2" value="yes">Наличие авто 2</p>
+            <p><input type="checkbox" name="car3" value="yes">Наличие авто 3</p>
+            <p><input checked type="checkbox" name="car4" value="yes">Наличие авто 4</p>
+        </div>
+        <br />
+        <div>
+            <!-- Ввод фото изображения - методом обзора файла на ПК. Имя файла отобразиться в момент его выбора -->
+            <p><input type="file" name="foto"></p>
+        </div>
+        <br />
+        <div>
+            <!-- Ввод текста в окне - указываются высота и длинна, указывать не обязательно, т.к. этобудет прописано в файлах Js и css-->
+            <textarea placeholder="Место для комментария" name="text" cols="30" rows="10"></textarea>
+        </div>
+        <br />
+        <div>
+            <!-- Ввод текста в выпадающем окне. По умолчанию можно выбрать любой цвет приписав selected. 
+            Можно выбрать несколько цветов зажав Сntrl, если в форме селектед приписать Multiple-->
+            <select name="color">
+                <option value="red">Красный</option>
+                <option value="yellow">Жёлтый</option>
+                <option selected value="blue">Голубой</option>
+            </select>
+        </div>
+        <br />
+        <div>
+            <!--Создание кнопки отправки данных и кнопки сброса до настроек "по умолчанию"-->
+            <button type="submit">Отправить</button>
+            <p>
+                <button type="reset">Сбросить</button>
+            </p>
+        </div>
+    </form>
 </body>
 
 </html>
