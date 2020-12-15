@@ -8,76 +8,47 @@
     <!--кодировка страницы-->
     <meta charset="utf-8" />
     <!--Название страницы в браузере-->
-    <title>Изучение тегов HTML на занятии №4 - Формы</title>
+    <title>Изучение тегов CSS на занятии №5 Вступление</title>
+    <!-- Нижней строкой мыуказываем путь к файлу таблицы стилей css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <!--отображаемое тело страницы-->
 
 <body>
-    <!-- отправляет малое количество данных (нельзя отправить фото), видно для всех, на адресс указанный за место #, в строке браузера видна отправка данных-->
-    <form action="#" method="get"></form>
-    <!-- отправляет большее количество данных, скрытно, по запросу браузера на адресс указанный за место # -->
-    <form action="#" method="post"></form>
+    <div>
+        <p class="bigred">
+            Lorem <span class="bigred">ipsum dolor</span> sit amet consectetur <span>adipisicing
+                elit</span>. Porro
+            voluptatum
+            perferendis explicabo
+            laudantium odit. Ea aliquid tempora, maiores sequi eaque ullam, aspernatur sed aut nisi esse quam non odit
+            enim!</p>
+        <p>Lorem ipsum dolor sit amet, <span class="bigred"> consectetur adipisicing
+            </span> elit. Ab, id.
+        </p>
+    </div>
 
-    <form action="#" method="post" enctype="multipart/form-data">
+    <!-- Пример неполного изменения ветви тэга -->
+    <div class="block">
+        <p>
+            Lorem <span>ipsum dolor</span> sit amet consectetur <span>adipisicing
+                elit</span>. Porro
+            voluptatum
+            perferendis explicabo
+            laudantium odit. Ea aliquid tempora, maiores sequi eaque ullam, aspernatur sed aut nisi esse quam non odit
+            enim!</p>
+        <p>Lorem ipsum dolor sit amet, <span> consectetur adipisicing
+            </span> elit. Ab, id.
+        </p>
+        <!-- нижний тэг не будет подвержен изменению стилдей, по условиям файла цсс -->
+        <div>
+            <p>Text</p>
+        </div>
+    </div>
 
-        <div>
-            <!-- ввод данных от пользователя, значение value может быть пустым
-        Тег "placeholder" обозначает пользователю, что необходимо ввести в указанное поле
-        Тег "disabled" делает поле не рабочим - файлы не отправляются на сервер -->
-            <!-- Tabindex определяет порядок перехода после нажатия на клавишу "Tab" Для общей группы тегов табиндек должен бытьс общим числом-->
-            <input tabindex="1" placeholder="Имя пользователя" type="text" name="user">
-        </div>
-        <div>
-            <input disabled type="password" name="userpass" value="">
-        </div>
-        <div>
-            <!-- Ввод данных по средствам выбора готовых значений, "checked" указывает на выбор по умолчанию -->
-            <p><input tabindex="2" checked type="radio" name="beer" value="lager">Светлое</p>
-            <p><input tabindex="2" type="radio" name="beer" value="dark">Тёмное</p>
-        </div>
-        <br />
-        <div>
-            <p><input type="radio" name="beer2" value="lager">Светлое 2</p>
-            <p><input checked type="radio" name="beer2" value="dark">Тёмное 2</p>
-        </div>
-        <br />
-        <div>
-            <!-- Ввод данных - методом указания галочкой имеющихся данных -->
-            <p><input type="checkbox" name="car" value="yes"> Наличие авто </p>
-            <p><input type="checkbox" name="car2" value="yes">Наличие авто 2</p>
-            <p><input type="checkbox" name="car3" value="yes">Наличие авто 3</p>
-            <p><input checked type="checkbox" name="car4" value="yes">Наличие авто 4</p>
-        </div>
-        <br />
-        <div>
-            <!-- Ввод фото изображения - методом обзора файла на ПК. Имя файла отобразиться в момент его выбора -->
-            <p><input type="file" name="foto"></p>
-        </div>
-        <br />
-        <div>
-            <!-- Ввод текста в окне - указываются высота и длинна, указывать не обязательно, т.к. этобудет прописано в файлах Js и css-->
-            <textarea placeholder="Место для комментария" name="text" cols="30" rows="10"></textarea>
-        </div>
-        <br />
-        <div>
-            <!-- Ввод текста в выпадающем окне. По умолчанию можно выбрать любой цвет приписав selected. 
-            Можно выбрать несколько цветов зажав Сntrl, если в форме селект приписать Multiple-->
-            <select name="color">
-                <option value="red">Красный</option>
-                <option value="yellow">Жёлтый</option>
-                <option selected value="blue">Голубой</option>
-            </select>
-        </div>
-        <br />
-        <div>
-            <!--Создание кнопки отправки данных и кнопки сброса до настроек "по умолчанию"-->
-            <button type="submit">Отправить</button>
-            <p>
-                <button type="reset">Сбросить</button>
-            </p>
-        </div>
-    </form>
+
+
 </body>
 
 </html>
