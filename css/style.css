@@ -5,28 +5,28 @@
 
 /* Тэг "*" означает, что мы обращаемся ко всем тэгам страницы */
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
 
 /* Кратко: Меняет ширину блока так,чтобы нам было удобнее верстать */
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Убираем линии обводки */
 :focus,
 :active {
-  outline: none;
+	outline: none;
 }
 a:focus,
 a:active {
-  outline: none;
+	outline: none;
 }
 
 /* Перечисляем HTML5 тэги. Добавляем значение "Блок", что делает их блочными */
@@ -34,21 +34,21 @@ nav,
 footer,
 header,
 aside {
-  display: block;
+	display: block;
 }
 
 /* Обратимся к тегам HTML и Body. Выставим в них значения
 которые уравняют их в различных браузерах. И запрещают увеличение шрифта */
 html,
 body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 /* Обращаемся к следующим тэгам, чтобы они унаследовали семейство шрифта.
@@ -56,33 +56,33 @@ body {
 input,
 button,
 textarea {
-  font-family: inherit;
+	font-family: inherit;
 }
 
 /* Следующие настройки убирают, некоторые особенности, браузеров 
 (типа крестик, отступы, стили */
 input ::-ms-clear {
-  display: none;
+	display: none;
 }
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
 button ::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+	padding: 0;
+	border: 0;
 }
 a,
 a:visited {
-  text-decoration: none;
+	text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 ul li {
-  list-style: none;
+	list-style: none;
 }
 img {
-  vertical-align: top;
+	vertical-align: top;
 }
 
 /* Обнуляем все заголовки Н */
@@ -92,53 +92,58 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: 400;
+	font-size: inherit;
+	font-weight: 400;
 }
 
 /* Все стили обнулились. У нас "чистый лист", теперь мы сами творцы своего стиля */
+/* ______________________________________________________________________________ */
 
-.arial {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	padding: 53px 84px 50px;
+	width: 1280px;
+	height: 3186px;
 }
-.fz30 {
-  font-size: 30px;
+.first {
+	width: 611px;
+	height: 64px;
+	line-height: 25px;
 }
-/* Могут быть значения normal и oblic(наклонное начертание)*/
-.italic {
-  font-style: italic;
+.sp1 {
+	display: block;
+	width: 274px;
+	margin: 33px 78px 2px 1px;
 }
 
-.font700 {
-  font-weight: 700;
+.a1 {
 }
-.colored {
-  color: red;
+.second {
+	margin: 32px 0px 0px 3px;
+	line-height: 25px;
+	height: 86px;
+	width: 1145px;
+	padding: 0 0 50px 0;
 }
-.textright {
-  text-align: center;
+.thridth {
+	display: inline-block;
+	margin: 0px 41px 0px 0px;
 }
-.decoration {
-  text-decoration: line-through;
+p {
+	display: inline-block;
+	margin: 0px 726px 0px 0px;
 }
-.shadow {
-  text-shadow: 1px 1px 10px black;
+.sp2 {
+	display: inline-block;
+	margin: 35px 1px 0px 0px;
 }
-.uppercase {
-  text-transform: uppercase;
+.a2 {
+	display: inline-block;
+	margin: 35px 0px 0px 41px;
 }
-.ident {
-  text-indent: 50px;
-}
-.lspace {
-  letter-spacing: 5px;
-}
-.wspace {
-  word-spacing: 5px;
-}
-.whitespace {
-  white-space: nowrap;
-}
-.lineheight {
-  line-height: 20px;
+.sp3 {
+	display: block;
+	width: 343px;
+	height: 111px;
+	padding: 50px 0;
 }
