@@ -100,29 +100,85 @@ h6 {
 /* _____________________________________________________________________________ */
 
 body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   padding: 30px;
-  /* background: url(../img/bg.jpg) center no-repeat fixed; */
+}
+
+.block {
+  margin: 0px 0px 30px 0px;
+}
+.block p:nth-child(1){
+background-color: grey;
+}
+.block p:nth-child(2){
+  background-color: green;
+}
+.block p:nth-child(3){
+  background-color: red;
+}
+.block p:nth-child(3):hover{
+  background-color: pink;
+}
+
+.block p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0px 0px 20px 0px;
+}
+.link {
+  color: red;
+}
+.link:visited {
+  color: green;
+}
+.link:hover {
+  text-decoration: underline;
+  color: blue;
+}
+.link:active {
+  color: yellow;
+}
+
+.textinput {
+  border: 1px solid #666;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 18px;
+  width: 300px;
+  margin: 0px 0px 10px 0px;
+}
+.textinput:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 8);
+}
+.textbutton {
+  display: block;
+  width: 300px;
+  height: 50px;
+  background-color: #666;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0px 0px 30px 0px;
+}
+.textbutton:hover {
+  background-color: grey;
+  color: yellow;
+}
+.textbutton:active {
+  background-color: pink;
 }
 .list {
-  margin: 0px 0px 50px 0px;
 }
 .list li {
-  font-size: 24px;
+  font-size: 18px;
   margin: 0px 0px 15px 0px;
-  padding: 0 0 0 30px;
-  background: url(../img/icons/li.svg) left 7px no-repeat;
 }
-.block {
-  /* Можно использовать ссылку на картинку в ковычкач и без */
-  /* background: url("../img/avatar_3.jpg"); */
-  /* background: url(../img/bg_repeat.jpg) no-repeat; */
-  /* background: url(../img/avatar_3.jpg) 100px 50px no-repeat; */
-  /* background-color: aqua; */
-  background: url(../img/avatar_3.jpg) 50% no-repeat, url(../img/avatar.jpg) 20px 50px no-repeat,
-    url(../img/bg.jpg) center / cover no-repeat;
-
-  height: 500px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #000;
+/* .list li:first-child{
+  color: green;
+}
+.list li:last-child{
+  color: blue;
+  font-weight: 700; */
+/* } */
+.list li:nth-child(even) {
+  text-decoration: underline;
 }
