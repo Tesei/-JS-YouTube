@@ -61,7 +61,7 @@ textarea {
 
 /* Следующие настройки убирают, некоторые особенности, браузеров 
 (типа крестик, отступы, стили */
-input ::-ms-clear {
+input::-ms-clear {
 	display: none;
 }
 button {
@@ -100,7 +100,7 @@ h6 {
 /* ______________________________________________________________________________ */
 
 body {
-	max-width: 841px;
+	max-width: 765px;
 	background-color: #e8e8e8;
 	padding: 161px 0px 250px 0px;
 	margin: 0px auto;
@@ -111,28 +111,43 @@ body {
 	margin: 0px 0px 130px 0px;
 	color: #273d46;
 }
+
 .text {
 }
 .text li {
-	line-height: 36px;
-	padding: 0px 0px 0px 36px;
-	background: url(../img/icons/check_icon.png) 0 8px no-repeat;
+	display: inline-block;
+	padding: 0px 0px 0px 35px;
+	line-height: 35.5px;
+	width: 580px;
+}
+
+.text li::before {
+	content: "";
+	width: 25px;
+	height: 19px;
+	background: url(../img/icons/check_icon.png) 0 0px / contain no-repeat;
+	display: inline-block;
+	margin: 0px 9px 0px 0px;
+	top: 50%;
+	transform: translateY -50%;
 }
 .text li:first-child {
-	/* Style for "Put on thi" */
 	text-decoration: line-through;
 }
 .text li:first-child:hover {
 	text-decoration: none;
 }
 .text li:nth-child(2) {
-	/* Style for "A detailed" */
 	font-weight: bold;
+}
+
+.text li:nth-child(2):hover::before {
+	content: ;
+	background: url(../img/icons/check_icon-red.png) 0 0px no-repeat;
 }
 .text li:nth-child(2):hover {
 	color: red;
 	font-weight: normal;
-	background: url(../img/icons/check_icon-red.png) 0 8px no-repeat;
 }
 .text li:nth-child(3) {
 	font-style: italic;
@@ -141,13 +156,12 @@ body {
 	font-style: normal;
 }
 .text li:last-child {
-	/* Style for "Associate" */
 	text-transform: uppercase;
 }
 .text li:last-child:hover {
 	text-transform: none;
 }
-.bot {
+.center {
 }
 .button {
 	display: block;
@@ -156,7 +170,7 @@ body {
 	height: 44px;
 	box-shadow: 0 6px 40px rgba(128, 183, 179, 0.54);
 	border-radius: 20px;
-	background: #80b7b3 url(../img/icons/arrow-right.svg) 150px no-repeat;
+	background: #80b7b3;
 	margin: 0px 0px 125px 25px;
 }
 .button:hover {
@@ -174,10 +188,17 @@ body {
 	line-height: 20px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	padding: 12px 30px;
+	padding: 2px 0px 12px 30px;
 }
-.button a:visited {
-	color: yellow;
+
+.button a::after {
+	content: "";
+	display: inline-block;
+	width: 21px;
+	height: 12px;
+	background: url(../img/icons/arrow-right.svg) 0 0px no-repeat;
+	margin: 12px 0px 0px 9px;
+	padding: 0px 0px 0px 0px;
 }
 .textarea {
 	display: block;
@@ -185,8 +206,24 @@ body {
 	width: 292px;
 	height: 50px;
 	border: 1px solid #b0b0b0;
+	margin: 0px 0px 115px 0px;
 }
 .textarea:focus {
 	box-shadow: 0 0 20px rgba(127, 190, 213, 0.93);
 	border: 1px solid #7fbed5;
+}
+.bottom {
+	font-size: 18px;
+	line-height: 28px;
+	text-align: left;
+}
+.b1 {
+	margin: 0px 0px 40px 5px;
+}
+.b1::first-line {
+	color: red;
+}
+.b2::first-letter {
+	color: red;
+	font-size: 25px;
 }

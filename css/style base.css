@@ -61,13 +61,13 @@ textarea {
 
 /* Следующие настройки убирают, некоторые особенности, браузеров 
 (типа крестик, отступы, стили */
-input ::-ms-clear {
+input::-ms-clear {
   display: none;
 }
 button {
   cursor: pointer;
 }
-button ::-moz-focus-inner {
+button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
@@ -102,83 +102,39 @@ h6 {
 body {
   padding: 30px;
 }
-
-.block {
+.text {
+  font-size: 24px;
+  line-height: 33px;
   margin: 0px 0px 30px 0px;
 }
-.block p:nth-child(1){
-background-color: grey;
-}
-.block p:nth-child(2){
-  background-color: green;
-}
-.block p:nth-child(3){
-  background-color: red;
-}
-.block p:nth-child(3):hover{
-  background-color: pink;
-}
-
-.block p {
-  font-size: 18px;
-  line-height: 24px;
-  margin: 0px 0px 20px 0px;
-}
-.link {
-  color: red;
-}
-.link:visited {
+.text:first-line {
   color: green;
 }
-.link:hover {
-  text-decoration: underline;
-  color: blue;
-}
-.link:active {
-  color: yellow;
+.text::first-letter {
+  color: red;
+  font-size: 40px;
 }
 
-.textinput {
-  border: 1px solid #666;
-  height: 50px;
-  padding: 0 15px;
-  font-size: 18px;
-  width: 300px;
-  margin: 0px 0px 10px 0px;
-}
-.textinput:focus {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 8);
-}
-.textbutton {
-  display: block;
-  width: 300px;
-  height: 50px;
-  background-color: #666;
-  font-size: 18px;
-  color: #fff;
-  text-transform: uppercase;
-  margin: 0px 0px 30px 0px;
-}
-.textbutton:hover {
-  background-color: grey;
-  color: yellow;
-}
-.textbutton:active {
-  background-color: pink;
-}
 .list {
 }
 .list li {
-  font-size: 18px;
-  margin: 0px 0px 15px 0px;
+  font-size: 24px;
+  margin: 0px 0px 20px 0px;
 }
-/* .list li:first-child{
-  color: green;
+/* .list li::after{
+  content: '»';
+} */
+
+.list li:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
 }
-.list li:last-child{
-  color: blue;
-  font-weight: 700; */
-/* } */
-.list li:nth-child(even) {
-  text-decoration: underline;
+
+.list li:hover::before {
+  background-color: yellow;
 }
