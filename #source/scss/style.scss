@@ -1,0 +1,185 @@
+@import "nullstyle.scss";
+/* Все стили обнулились. У нас "чистый лист", теперь мы сами творцы своего стиля */
+/* ______________________________________________________________________________ */
+
+// $fz: 100px;
+
+// %tplborder{
+// 	border-bottom: 5px dashed red;
+// }
+
+// .block {
+// 	padding: 30px;
+// 	line-height: 60px;
+// 	>p{
+// 		color: red;
+// 	}
+// 	.block_text {
+// 		font-size: $fz;
+// 		span {
+// 			color: green;
+// 		}
+// 	}
+// }
+// .link {
+// 	color: blue;
+// 	text-decoration: underline;
+// 	.block & {
+// 		font-size: $fz;
+// 	}
+// 	&:hover {
+// 		color: green;
+// 	}
+// 	@extend %tplborder;
+// }
+// .link-2{
+// 	font-size: 80px;
+// 	@extend %tplborder;
+// }
+%smallkub {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	color: #000;
+	z-index: 4;
+	border: 1px solid #000;
+}
+%avragekub {
+	width: 230px;
+	height: 230px;
+	position: absolute;
+	background-color: blue;
+	top: 370px;
+	z-index: 1;
+}
+%puzzle {
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	z-index: 2;
+	margin: 18px;
+	.link {
+		height: 80px;
+		width: 200px;
+		display: inline-block;
+		text-align: center;
+		padding: 25px 0;
+		font-size: 24px;
+		background-color: rgb(131, 11, 11);
+		color: #fff;
+		text-decoration: underline;
+		&:hover {
+			background-color: yellow;
+			color: blue;
+		}
+	}
+
+	.img {
+		display: block;
+		margin: 35px 25px;
+		height: 150px;
+	}
+	&:hover {
+		border: 2px solid #000;
+	}
+}
+
+$shadow: 2px 6px 5px;
+$bblack: 5px solid black;
+
+.kub1 {
+	width: 400px;
+	height: 400px;
+	outline: 4px solid #000;
+	position: relative;
+	z-index: 2;
+	top: 40px;
+	left: 60px;
+	box-shadow: $shadow;
+
+	.kub2 {
+		@extend %smallkub;
+		background-color: chartreuse;
+		top: 0px;
+		left: 0px;
+	}
+	.kub3 {
+		@extend %smallkub;
+		background-color: white;
+		top: -200px;
+		left: 200px;
+	}
+	.kub4 {
+		@extend %smallkub;
+		background-color: black;
+		top: -200px;
+		left: 0px;
+	}
+	.kub5 {
+		@extend %smallkub;
+		background-color: brown;
+		top: -400px;
+		left: 200px;
+	}
+}
+
+.kub6 {
+	width: 650px;
+	height: 400px;
+	background-color: grey;
+	padding: 25px;
+	position: fixed;
+	left: 485px;
+	top: 40px;
+	outline: 4px solid #000;
+	box-shadow: $shadow;
+	z-index: 3;
+	.kub7 {
+		width: 600px;
+		height: 350px;
+		background-color: red;
+		z-index: 4;
+	}
+}
+
+.kub8 {
+	@extend %avragekub;
+	left: 370px;
+}
+.kub9 {
+	@extend %avragekub;
+	left: 620px;
+	z-index: 5;
+}
+.kub10 {
+	@extend %avragekub;
+	left: 870px;
+}
+.kub11 {
+	max-width: 1115px;
+	height: 350px;
+	background-color: rgb(229, 226, 226);
+	position: relative;
+	margin: 0px auto;
+	top: 300px;
+	border: $bblack;
+	.puzzle1 {
+		@extend %puzzle;
+	}
+	.puzzle2 {
+		@extend %puzzle;
+		left: 218px;
+	}
+	.puzzle3 {
+		@extend %puzzle;
+		left: 436px;
+	}
+	.puzzle4 {
+		@extend %puzzle;
+		left: 654px;
+	}
+	.puzzle5 {
+		@extend %puzzle;
+		left: 872px;
+	}
+}

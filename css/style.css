@@ -1,32 +1,31 @@
+@charset "UTF-8";
 /* Сейчас мы приведём страницу браузера в "чистый вид".
 Это необходим, чтобы настройки различных браузеров не
 подстраивали каждый по своему "умолчанию",
 а везде было одинаково - кросс-платформа */
-
 /* Тэг "*" означает, что мы обращаемся ко всем тэгам страницы */
 * {
-	padding: 0;
-	margin: 0;
-	border: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 /* Кратко: Меняет ширину блока так,чтобы нам было удобнее верстать */
 *,
 *:before,
 *:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Убираем линии обводки */
 :focus,
 :active {
-	outline: none;
+  outline: none;
 }
+
 a:focus,
 a:active {
-	outline: none;
+  outline: none;
 }
 
 /* Перечисляем HTML5 тэги. Добавляем значение "Блок", что делает их блочными */
@@ -34,21 +33,21 @@ nav,
 footer,
 header,
 aside {
-	display: block;
+  display: block;
 }
 
 /* Обратимся к тегам HTML и Body. Выставим в них значения
 которые уравняют их в различных браузерах. И запрещают увеличение шрифта */
 html,
 body {
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Обращаемся к следующим тэгам, чтобы они унаследовали семейство шрифта.
@@ -56,33 +55,39 @@ body {
 input,
 button,
 textarea {
-	font-family: inherit;
+  font-family: inherit;
 }
 
 /* Следующие настройки убирают, некоторые особенности, браузеров 
 (типа крестик, отступы, стили */
 input::-ms-clear {
-	display: none;
+  display: none;
 }
+
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
+
 button ::-moz-focus-inner {
-	padding: 0;
-	border: 0;
+  padding: 0;
+  border: 0;
 }
+
 a,
 a:visited {
-	text-decoration: none;
+  text-decoration: none;
 }
+
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
+
 ul li {
-	list-style: none;
+  list-style: none;
 }
+
 img {
-	vertical-align: top;
+  vertical-align: top;
 }
 
 /* Обнуляем все заголовки Н */
@@ -92,32 +97,142 @@ h3,
 h4,
 h5,
 h6 {
-	font-size: inherit;
-	font-weight: 400;
+  font-size: inherit;
+  font-weight: 400;
 }
 
 /* Все стили обнулились. У нас "чистый лист", теперь мы сами творцы своего стиля */
 /* ______________________________________________________________________________ */
-body {
-	padding: 30px;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-.list {
-	font-size: 18px;
+.kub1 .kub5, .kub1 .kub4, .kub1 .kub3, .kub1 .kub2 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  color: #000;
+  z-index: 4;
+  border: 1px solid #000;
 }
 
-.list li {
-	margin: 0px 0px 10px 0px;
-	position: relative;
-	padding: 0px 0px 0px 30px;
+.kub10, .kub9, .kub8 {
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  background-color: blue;
+  top: 370px;
+  z-index: 1;
 }
-.list li::before{
-	content: '';
-	width: 20px;
-	height: 20px;
-	background: url(../img/icons/li.svg) 0 0 no-repeat;
-	position: absolute;
-	top: 4px ;
-	left: 0;
-	
+
+.kub11 .puzzle5, .kub11 .puzzle4, .kub11 .puzzle3, .kub11 .puzzle2, .kub11 .puzzle1 {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  z-index: 2;
+  margin: 18px;
+}
+.kub11 .puzzle5 .link, .kub11 .puzzle4 .link, .kub11 .puzzle3 .link, .kub11 .puzzle2 .link, .kub11 .puzzle1 .link {
+  height: 80px;
+  width: 200px;
+  display: inline-block;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 24px;
+  background-color: #830b0b;
+  color: #fff;
+  text-decoration: underline;
+}
+.kub11 .puzzle5 .link:hover, .kub11 .puzzle4 .link:hover, .kub11 .puzzle3 .link:hover, .kub11 .puzzle2 .link:hover, .kub11 .puzzle1 .link:hover {
+  background-color: yellow;
+  color: blue;
+}
+.kub11 .puzzle5 .img, .kub11 .puzzle4 .img, .kub11 .puzzle3 .img, .kub11 .puzzle2 .img, .kub11 .puzzle1 .img {
+  display: block;
+  margin: 35px 25px;
+  height: 150px;
+}
+.kub11 .puzzle5:hover, .kub11 .puzzle4:hover, .kub11 .puzzle3:hover, .kub11 .puzzle2:hover, .kub11 .puzzle1:hover {
+  border: 2px solid #000;
+}
+
+.kub1 {
+  width: 400px;
+  height: 400px;
+  outline: 4px solid #000;
+  position: relative;
+  z-index: 2;
+  top: 40px;
+  left: 60px;
+  box-shadow: 2px 6px 5px;
+}
+.kub1 .kub2 {
+  background-color: chartreuse;
+  top: 0px;
+  left: 0px;
+}
+.kub1 .kub3 {
+  background-color: white;
+  top: -200px;
+  left: 200px;
+}
+.kub1 .kub4 {
+  background-color: black;
+  top: -200px;
+  left: 0px;
+}
+.kub1 .kub5 {
+  background-color: brown;
+  top: -400px;
+  left: 200px;
+}
+
+.kub6 {
+  width: 650px;
+  height: 400px;
+  background-color: grey;
+  padding: 25px;
+  position: fixed;
+  left: 485px;
+  top: 40px;
+  outline: 4px solid #000;
+  box-shadow: 2px 6px 5px;
+  z-index: 3;
+}
+.kub6 .kub7 {
+  width: 600px;
+  height: 350px;
+  background-color: red;
+  z-index: 4;
+}
+
+.kub8 {
+  left: 370px;
+}
+
+.kub9 {
+  left: 620px;
+  z-index: 5;
+}
+
+.kub10 {
+  left: 870px;
+}
+
+.kub11 {
+  max-width: 1115px;
+  height: 350px;
+  background-color: #e5e2e2;
+  position: relative;
+  margin: 0px auto;
+  top: 300px;
+  border: 5px solid black;
+}
+.kub11 .puzzle2 {
+  left: 218px;
+}
+.kub11 .puzzle3 {
+  left: 436px;
+}
+.kub11 .puzzle4 {
+  left: 654px;
+}
+.kub11 .puzzle5 {
+  left: 872px;
 }

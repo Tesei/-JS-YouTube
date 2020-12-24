@@ -95,29 +95,3 @@ h6 {
 	font-size: inherit;
 	font-weight: 400;
 }
-
-/* Все стили обнулились. У нас "чистый лист", теперь мы сами творцы своего стиля */
-/* ______________________________________________________________________________ */
-body {
-	padding: 30px;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-.list {
-	font-size: 18px;
-}
-
-.list li {
-	margin: 0px 0px 10px 0px;
-	position: relative;
-	padding: 0px 0px 0px 30px;
-}
-.list li::before{
-	content: '';
-	width: 20px;
-	height: 20px;
-	background: url(../img/icons/li.svg) 0 0 no-repeat;
-	position: absolute;
-	top: 4px ;
-	left: 0;
-	
-}
