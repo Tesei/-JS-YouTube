@@ -106,10 +106,9 @@ h6 {
 .kub1 .kub5, .kub1 .kub4, .kub1 .kub3, .kub1 .kub2 {
   width: 200px;
   height: 200px;
-  position: relative;
   color: #000;
-  z-index: 4;
   border: 1px solid #000;
+  float: left;
 }
 
 .kub10, .kub9, .kub8 {
@@ -164,23 +163,15 @@ h6 {
 }
 .kub1 .kub2 {
   background-color: chartreuse;
-  top: 0px;
-  left: 0px;
 }
 .kub1 .kub3 {
   background-color: white;
-  top: -200px;
-  left: 200px;
 }
 .kub1 .kub4 {
   background-color: black;
-  top: -200px;
-  left: 0px;
 }
 .kub1 .kub5 {
   background-color: brown;
-  top: -400px;
-  left: 200px;
 }
 
 .kub6 {
