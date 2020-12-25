@@ -59,8 +59,8 @@
 	z-index: 2;
 	margin: 18px;
 	.link {
-		height: 80px;
-		width: 200px;
+		height: 76px;
+		width: 196px;
 		display: inline-block;
 		text-align: center;
 		padding: 25px 0;
@@ -130,7 +130,7 @@ $bblack: 5px solid black;
 	padding: 25px;
 	position: fixed;
 	left: 485px;
-	top: 40px;
+	top: 55px;
 	outline: 4px solid #000;
 	box-shadow: $shadow;
 	z-index: 3;
@@ -165,10 +165,11 @@ $bblack: 5px solid black;
 	border: $bblack;
 	.puzzle1 {
 		@extend %puzzle;
+		left: -2px;
 	}
 	.puzzle2 {
 		@extend %puzzle;
-		left: 218px;
+		left: 220px;
 	}
 	.puzzle3 {
 		@extend %puzzle;
@@ -180,6 +181,6 @@ $bblack: 5px solid black;
 	}
 	.puzzle5 {
 		@extend %puzzle;
-		left: 872px;
+		left: 870px;
 	}
 }

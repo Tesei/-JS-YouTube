@@ -129,8 +129,8 @@ h6 {
   margin: 18px;
 }
 .kub11 .puzzle5 .link, .kub11 .puzzle4 .link, .kub11 .puzzle3 .link, .kub11 .puzzle2 .link, .kub11 .puzzle1 .link {
-  height: 80px;
-  width: 200px;
+  height: 76px;
+  width: 196px;
   display: inline-block;
   text-align: center;
   padding: 25px 0;
@@ -190,7 +190,7 @@ h6 {
   padding: 25px;
   position: fixed;
   left: 485px;
-  top: 40px;
+  top: 55px;
   outline: 4px solid #000;
   box-shadow: 2px 6px 5px;
   z-index: 3;
@@ -224,8 +224,11 @@ h6 {
   top: 300px;
   border: 5px solid black;
 }
+.kub11 .puzzle1 {
+  left: -2px;
+}
 .kub11 .puzzle2 {
-  left: 218px;
+  left: 220px;
 }
 .kub11 .puzzle3 {
   left: 436px;
@@ -234,5 +237,5 @@ h6 {
   left: 654px;
 }
 .kub11 .puzzle5 {
-  left: 872px;
+  left: 870px;
 }
