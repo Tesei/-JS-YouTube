@@ -52,11 +52,12 @@
 	z-index: 1;
 }
 %puzzle {
-	width: 200px;
-	height: 300px;
+	width: 180px/1000px*100%;
+	height: 300px/320px*100%;
 	position: absolute;
 	z-index: 2;
-	margin: 18px;
+	margin: 10px;
+	float: left;
 	.link {
 		height: 76px;
 		width: 196px;
@@ -72,7 +73,6 @@
 			color: blue;
 		}
 	}
-
 	.img {
 		display: block;
 		margin: 35px 25px;
@@ -85,6 +85,13 @@
 
 $shadow: 2px 6px 5px;
 $bblack: 5px solid black;
+
+body{
+	max-width: 1500px;
+	margin: 0px auto;
+	padding: 0 0 0 50px;
+
+}
 
 .kub1 {
 	width: 400px;
@@ -147,11 +154,11 @@ $bblack: 5px solid black;
 	left: 870px;
 }
 .kub11 {
-	max-width: 1115px;
+	max-width: 1100px;
 	height: 350px;
 	background-color: rgb(229, 226, 226);
 	position: relative;
-	margin: 0px auto;
+	margin: 20px auto;
 	top: 300px;
 	border: $bblack;
 	.puzzle1 {
@@ -173,5 +180,39 @@ $bblack: 5px solid black;
 	.puzzle5 {
 		@extend %puzzle;
 		left: 870px;
+	}
+}
+
+.newform {
+	max-width: 1300px;
+	min-width: 1020px;
+	height: 320px;
+	background-color: rgb(229, 226, 226);
+	position: relative;
+	margin: 20px auto;
+	top: 300px;
+	border: $bblack;
+	display: inline-block;
+	align-content: center;
+
+	li:first-child {
+		@extend %puzzle;
+		position: static;
+	}
+	li:nth-child(2) {
+		@extend %puzzle;
+		position: static;
+	}
+	li:nth-child(3) {
+		@extend %puzzle;
+		position: static;
+	}
+	li:nth-child(4) {
+		@extend %puzzle;
+		position: static;
+	}
+	li:last-child {
+		@extend %puzzle;
+		position: static;
 	}
 }
