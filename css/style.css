@@ -1,4 +1,26 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../fonts/HelveticaNeueCyr-Roman.eot");
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype"), url("../fonts/HelveticaNeueCyr-Roman.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../fonts/HelveticaNeueCyr-Italic.eot");
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-Italic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Italic.ttf") format("truetype"), url("../fonts/HelveticaNeueCyr-Italic.svg") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../fonts/HelveticaNeueCyr-Bold.eot");
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Bold.ttf") format("truetype"), url("../fonts/HelveticaNeueCyr-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
 /* Сейчас мы приведём страницу браузера в "чистый вид".
 Это необходим, чтобы настройки различных браузеров не
 подстраивали каждый по своему "умолчанию",
@@ -103,165 +125,29 @@ h6 {
 
 /* Все стили обнулились. У нас "чистый лист", теперь мы сами творцы своего стиля */
 /* ______________________________________________________________________________ */
-.kub1 .kub5, .kub1 .kub4, .kub1 .kub3, .kub1 .kub2 {
-  width: 200px;
-  height: 200px;
-  color: #000;
-  border: 1px solid #000;
-  float: left;
+.text {
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+  line-height: 35px;
+}
+.text p {
+  margin: 0px 0px 30px 0px;
 }
 
-.kub10, .kub9, .kub8 {
-  width: 230px;
-  height: 230px;
-  position: absolute;
-  background-color: blue;
-  top: 370px;
-  z-index: 1;
+.textbold {
+  font-family: "Helvetica Neue";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+}
+.textbold p {
+  margin: 0px 0px 30px 0px;
 }
 
-.newform li:last-child, .newform li:nth-child(4), .newform li:nth-child(3), .newform li:nth-child(2), .newform li:first-child, .kub11 .puzzle5, .kub11 .puzzle4, .kub11 .puzzle3, .kub11 .puzzle2, .kub11 .puzzle1 {
-  width: 18%;
-  height: 93.75%;
-  position: absolute;
-  z-index: 2;
-  margin: 10px;
-  float: left;
+.textbold2 {
+  font-size: 30px;
+  line-height: 35px;
 }
-.newform li:last-child .link, .newform li:nth-child(4) .link, .newform li:nth-child(3) .link, .newform li:nth-child(2) .link, .newform li:first-child .link, .kub11 .puzzle5 .link, .kub11 .puzzle4 .link, .kub11 .puzzle3 .link, .kub11 .puzzle2 .link, .kub11 .puzzle1 .link {
-  height: 76px;
-  width: 196px;
-  display: inline-block;
-  text-align: center;
-  padding: 25px 0;
-  font-size: 24px;
-  background-color: #830b0b;
-  color: #fff;
-  text-decoration: underline;
-}
-.newform li:last-child .link:hover, .newform li:nth-child(4) .link:hover, .newform li:nth-child(3) .link:hover, .newform li:nth-child(2) .link:hover, .newform li:first-child .link:hover, .kub11 .puzzle5 .link:hover, .kub11 .puzzle4 .link:hover, .kub11 .puzzle3 .link:hover, .kub11 .puzzle2 .link:hover, .kub11 .puzzle1 .link:hover {
-  background-color: yellow;
-  color: blue;
-}
-.newform li:last-child .img, .newform li:nth-child(4) .img, .newform li:nth-child(3) .img, .newform li:nth-child(2) .img, .newform li:first-child .img, .kub11 .puzzle5 .img, .kub11 .puzzle4 .img, .kub11 .puzzle3 .img, .kub11 .puzzle2 .img, .kub11 .puzzle1 .img {
-  display: block;
-  margin: 35px 25px;
-  height: 150px;
-}
-.newform li:hover:last-child, .newform li:hover:nth-child(4), .newform li:hover:nth-child(3), .newform li:hover:nth-child(2), .newform li:hover:first-child, .kub11 .puzzle5:hover, .kub11 .puzzle4:hover, .kub11 .puzzle3:hover, .kub11 .puzzle2:hover, .kub11 .puzzle1:hover {
-  border: 2px solid #000;
-}
-
-body {
-  max-width: 1500px;
-  margin: 0px auto;
-  padding: 0 0 0 50px;
-}
-
-.kub1 {
-  width: 400px;
-  height: 400px;
-  outline: 4px solid #000;
-  position: relative;
-  z-index: 2;
-  top: 40px;
-  left: 60px;
-  box-shadow: 2px 6px 5px;
-}
-.kub1 .kub2 {
-  background-color: chartreuse;
-}
-.kub1 .kub3 {
-  background-color: white;
-}
-.kub1 .kub4 {
-  background-color: black;
-}
-.kub1 .kub5 {
-  background-color: brown;
-}
-
-.kub6 {
-  width: 650px;
-  height: 400px;
-  background-color: grey;
-  padding: 25px;
-  position: fixed;
-  left: 485px;
-  top: 55px;
-  outline: 4px solid #000;
-  box-shadow: 2px 6px 5px;
-  z-index: 3;
-}
-.kub6 .kub7 {
-  width: 600px;
-  height: 350px;
-  background-color: red;
-  z-index: 4;
-}
-
-.kub8 {
-  left: 370px;
-}
-
-.kub9 {
-  left: 620px;
-  z-index: 5;
-}
-
-.kub10 {
-  left: 870px;
-}
-
-.kub11 {
-  max-width: 1100px;
-  height: 350px;
-  background-color: #e5e2e2;
-  position: relative;
-  margin: 20px auto;
-  top: 300px;
-  border: 5px solid black;
-}
-.kub11 .puzzle1 {
-  left: -2px;
-}
-.kub11 .puzzle2 {
-  left: 220px;
-}
-.kub11 .puzzle3 {
-  left: 436px;
-}
-.kub11 .puzzle4 {
-  left: 654px;
-}
-.kub11 .puzzle5 {
-  left: 870px;
-}
-
-.newform {
-  max-width: 1300px;
-  min-width: 1020px;
-  height: 320px;
-  background-color: #e5e2e2;
-  position: relative;
-  margin: 20px auto;
-  top: 300px;
-  border: 5px solid black;
-  display: inline-block;
-  align-content: center;
-}
-.newform li:first-child {
-  position: static;
-}
-.newform li:nth-child(2) {
-  position: static;
-}
-.newform li:nth-child(3) {
-  position: static;
-}
-.newform li:nth-child(4) {
-  position: static;
-}
-.newform li:last-child {
-  position: static;
+.textbold2 p {
+  margin: 0px 0px 30px 0px;
 }

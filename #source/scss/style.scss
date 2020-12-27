@@ -1,218 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+
+@font-face {
+	font-family: "Helvetica Neue";
+	src: url("../../fonts/HelveticaNeueCyr-Roman.eot");
+	src: local("☺"), url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff"),
+		url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype"),
+		url("../fonts/HelveticaNeueCyr-Roman.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Helvetica Neue";
+	src: url("../../fonts/HelveticaNeueCyr-Italic.eot");
+	src: local("☺"), url("../fonts/HelveticaNeueCyr-Italic.woff") format("woff"),
+		url("../fonts/HelveticaNeueCyr-Italic.ttf") format("truetype"),
+		url("../fonts/HelveticaNeueCyr-Italic.svg") format("svg");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Helvetica Neue";
+	src: url("../../fonts/HelveticaNeueCyr-Bold.eot");
+	src: local("☺"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"),
+		url("../fonts/HelveticaNeueCyr-Bold.ttf") format("truetype"),
+		url("../fonts/HelveticaNeueCyr-Bold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+
 @import "_nullstyle.scss";
 /* Все стили обнулились. У нас "чистый лист", теперь мы сами творцы своего стиля */
 /* ______________________________________________________________________________ */
 
-// $fz: 100px;
-
-// %tplborder{
-// 	border-bottom: 5px dashed red;
-// }
-
-// .block {
-// 	padding: 30px;
-// 	line-height: 60px;
-// 	>p{
-// 		color: red;
-// 	}
-// 	.block_text {
-// 		font-size: $fz;
-// 		span {
-// 			color: green;
-// 		}
-// 	}
-// }
-// .link {
-// 	color: blue;
-// 	text-decoration: underline;
-// 	.block & {
-// 		font-size: $fz;
-// 	}
-// 	&:hover {
-// 		color: green;
-// 	}
-// 	@extend %tplborder;
-// }
-// .link-2{
-// 	font-size: 80px;
-// 	@extend %tplborder;
-// }
-%smallkub {
-	width: 200px;
-	height: 200px;
-	color: #000;
-	border: 1px solid #000;
-	float: left;
-}
-%avragekub {
-	width: 230px;
-	height: 230px;
-	position: absolute;
-	background-color: blue;
-	top: 370px;
-	z-index: 1;
-}
-%puzzle {
-	width: 180px/1000px*100%;
-	height: 300px/320px*100%;
-	position: absolute;
-	z-index: 2;
-	margin: 10px;
-	float: left;
-	.link {
-		height: 76px;
-		width: 196px;
-		display: inline-block;
-		text-align: center;
-		padding: 25px 0;
-		font-size: 24px;
-		background-color: rgb(131, 11, 11);
-		color: #fff;
-		text-decoration: underline;
-		&:hover {
-			background-color: yellow;
-			color: blue;
-		}
-	}
-	.img {
-		display: block;
-		margin: 35px 25px;
-		height: 150px;
-	}
-	&:hover {
-		border: 2px solid #000;
+.text {
+	font-family: "Helvetica Neue";
+	font-size: 30px;
+	line-height: 35px;
+	p {
+		margin: 0px 0px 30px 0px;
 	}
 }
 
-$shadow: 2px 6px 5px;
-$bblack: 5px solid black;
-
-body{
-	max-width: 1500px;
-	margin: 0px auto;
-	padding: 0 0 0 50px;
-
-}
-
-.kub1 {
-	width: 400px;
-	height: 400px;
-	outline: 4px solid #000;
-	position: relative;
-	z-index: 2;
-	top: 40px;
-	left: 60px;
-	box-shadow: $shadow;
-
-	.kub2 {
-		@extend %smallkub;
-		background-color: chartreuse;
-	}
-	.kub3 {
-		@extend %smallkub;
-		background-color: white;
-	}
-	.kub4 {
-		@extend %smallkub;
-		background-color: black;
-	}
-	.kub5 {
-		@extend %smallkub;
-		background-color: brown;
+.textbold {
+	font-family: "Helvetica Neue";
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 35px;
+	p {
+		margin: 0px 0px 30px 0px;
 	}
 }
-
-.kub6 {
-	width: 650px;
-	height: 400px;
-	background-color: grey;
-	padding: 25px;
-	position: fixed;
-	left: 485px;
-	top: 55px;
-	outline: 4px solid #000;
-	box-shadow: $shadow;
-	z-index: 3;
-	.kub7 {
-		width: 600px;
-		height: 350px;
-		background-color: red;
-		z-index: 4;
-	}
-}
-
-.kub8 {
-	@extend %avragekub;
-	left: 370px;
-}
-.kub9 {
-	@extend %avragekub;
-	left: 620px;
-	z-index: 5;
-}
-.kub10 {
-	@extend %avragekub;
-	left: 870px;
-}
-.kub11 {
-	max-width: 1100px;
-	height: 350px;
-	background-color: rgb(229, 226, 226);
-	position: relative;
-	margin: 20px auto;
-	top: 300px;
-	border: $bblack;
-	.puzzle1 {
-		@extend %puzzle;
-		left: -2px;
-	}
-	.puzzle2 {
-		@extend %puzzle;
-		left: 220px;
-	}
-	.puzzle3 {
-		@extend %puzzle;
-		left: 436px;
-	}
-	.puzzle4 {
-		@extend %puzzle;
-		left: 654px;
-	}
-	.puzzle5 {
-		@extend %puzzle;
-		left: 870px;
-	}
-}
-
-.newform {
-	max-width: 1300px;
-	min-width: 1020px;
-	height: 320px;
-	background-color: rgb(229, 226, 226);
-	position: relative;
-	margin: 20px auto;
-	top: 300px;
-	border: $bblack;
-	display: inline-block;
-	align-content: center;
-
-	li:first-child {
-		@extend %puzzle;
-		position: static;
-	}
-	li:nth-child(2) {
-		@extend %puzzle;
-		position: static;
-	}
-	li:nth-child(3) {
-		@extend %puzzle;
-		position: static;
-	}
-	li:nth-child(4) {
-		@extend %puzzle;
-		position: static;
-	}
-	li:last-child {
-		@extend %puzzle;
-		position: static;
+.textbold2 {
+	font-size: 30px;
+	line-height: 35px;
+	p {
+		margin: 0px 0px 30px 0px;
 	}
 }
