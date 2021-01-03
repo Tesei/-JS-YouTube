@@ -220,7 +220,7 @@ body {
 	display: flex;
 
 	&__fotoarea__column {
-		flex: 0 0 50%;
+		flex: 1 1 50%;
 	}
 
 	&__picture {
@@ -251,11 +251,11 @@ body {
 	&__row {
 		display: flex;
 		margin: 93px 0 0 0;
+		justify-content: space-around;
+		align-items: center;
 	}
 
 	&__icons {
-		flex: 0 0 25%;
-		margin: auto 0;
 	}
 }
 
